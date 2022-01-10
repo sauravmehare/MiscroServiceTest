@@ -1,0 +1,13 @@
+package com.ind.trainService;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class TestB {
+	
+	@GetMapping("/feign/print")
+	public void printing() {
+		
+	}
+	
+
+}

@@ -1,0 +1,12 @@
+package com.ind.trainService;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@FeignClient("ServiceB")
+public interface FeignServiceB {
+	
+	@GetMapping("B/print")
+	public void printing();
+
+}

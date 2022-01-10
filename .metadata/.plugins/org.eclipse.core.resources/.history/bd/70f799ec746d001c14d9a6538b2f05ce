@@ -1,0 +1,11 @@
+package com.ind.trainService;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@FeignClient(name="feignServiceB",url="http://localhost:8082")
+public interface FeignServiceB {
+
+	@GetMapping("/print")
+	public void printing();
+}

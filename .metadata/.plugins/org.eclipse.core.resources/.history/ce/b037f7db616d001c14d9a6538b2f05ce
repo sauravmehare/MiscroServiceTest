@@ -1,0 +1,5 @@
+package com.ind.trainService;
+
+public interface FeignServiceA {
+
+}

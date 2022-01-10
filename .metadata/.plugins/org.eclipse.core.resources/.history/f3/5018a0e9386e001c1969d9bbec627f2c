@@ -1,0 +1,15 @@
+package com.ind.trainService;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
+//@FeignClient(name="feignServiceB",url="http://localhost:8082")
+@FeignClient("ServiceB")
+public interface FeignServiceB {
+
+	@GetMapping("B/print")
+	@CircuitBreaker(name="usercircuitbreaker",fallbackMethod = "someMethod")
+	public void printing();
+}

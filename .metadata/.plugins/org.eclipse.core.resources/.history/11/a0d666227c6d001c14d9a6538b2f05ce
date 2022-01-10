@@ -1,0 +1,15 @@
+server:
+  port: 8004
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: servA
+        uri: http://localhost:8083/
+        predicates:
+        - Path=/**
+      - id: consumerModule
+        uri: http://localhost:8082/
+        predicates:
+        - Path=/**

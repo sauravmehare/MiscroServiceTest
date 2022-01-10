@@ -1,0 +1,8 @@
+package com.ind.trainService;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("ServiceB")
+public interface FeignServiceB {
+
+}

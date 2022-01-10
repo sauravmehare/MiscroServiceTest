@@ -1,0 +1,6 @@
+server.port=8086
+spring.application.name=ServiceA2
+
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true
+eureka.instance.prefer-ip-address=true
